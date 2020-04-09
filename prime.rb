@@ -1,5 +1,7 @@
-def prime?(n)
-  if n % n == 0 && n % 1 == 0
-    return true
-  end
+def prime?(number)
+  return false if !number.integer?
+  return false if number < 2
+  return true if number == 2
+  (2..number-1).each {|int| return false if number % int == 0}
+true
 end
